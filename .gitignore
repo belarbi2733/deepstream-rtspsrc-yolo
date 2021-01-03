@@ -1,0 +1,6 @@
+*.o
+*.so
+*.onnx
+*.engine
+*.mp4
+*.sh
