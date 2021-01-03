@@ -126,7 +126,7 @@ If you want to change pgie classes number form 10, you neet to change
 
 - `NUM_CLASSES_YOLO` in `yolo/nvdsinfer_custom_impl_Yolo/nvdsparsebbox_Yolo.cpp`
 - `PGIE_DETECTED_CLASS_NUM` and `pgie_classes_str` in `src/deepstream_rtspsrc_yolo.cpp`
-
+- `num-detected-classes` in `config/pgie_config.txt`
 
 *****************************************************************************
 * Copyright (c) 2019-2020 NVIDIA Corporation.  All rights reserved.
