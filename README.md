@@ -2,9 +2,9 @@
 
 <img src="https://raw.githubusercontent.com/ryokubozono/deepstream-rtspsrc-yolo/main/system_drawing.png" alt="system_drawing" title="system_drawing">
 
-The program detect objects from RTSP source and create RTSP output.
+This app detect objects from RTSP source and create RTSP output.
 
-It is made from Deepstream sample apps.
+This app is made from Deepstream sample-apps.
 
 YOLOv4 pre-trained model is trained using [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet).
 
@@ -45,7 +45,7 @@ You will find `yolo/nvdsinfer_custom_impl_Yolo/libnvdsinfer_custom_impl_Yolo.so`
 
 ### Download pre-trained ONNX model
 
-This YOLO model detect 10 classes.
+This YOLOv4 model detects 10 classes of shell.
 
 Google Drive: [https://drive.google.com/file/d/1MDd2u1Rn9xemOjd4fjJhm8SIHGqoieF8/view?usp=sharing](https://drive.google.com/file/d/1MDd2u1Rn9xemOjd4fjJhm8SIHGqoieF8/view?usp=sharing)
 
@@ -74,7 +74,7 @@ trtexec \
 
 ## Run prediction
 
-### Jetson
+Compile app.
 
 ```
 export CUDA_VER=10.2
