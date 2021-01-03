@@ -11,9 +11,15 @@
 # Deepstream rtspsrc YOLO
 
 The program detect objects from RTSP source and create RTSP output.
+
 It is made from Deepstream sample apps.
-YOLOv4 pretrained model is trained using [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)`.
+
+YOLOv4 pre-trained model is trained using [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet).
+
+ONNX model is created using [https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4).
+
 Pre-trained model detects 10 classes of shells.
+
 When RTSP source is disconnected, the APP wait for restarting RTSP source and try reset pipeline.
 
 ## Demo
@@ -101,3 +107,30 @@ Rum app with multi streams.
 ### Watch predicted streams.
 
 `rtsp://<Jestson's IP>:8554/dt-test`
+
+### Others
+
+#### PGIE's interval
+
+Update interval in `config/pgie_config.txt` to decrease Jetson's work load.
+
+This config means skip frames of RTSP source every `interval` number.
+
+```
+interval=5
+```
+
+#### Custom YOLO model
+
+If you want to use custom YOLOv4 or YOLOv4-tiny model, you need the following tasks.
+
+- train model and get weight file.
+- convert weight file to onnx file.
+- convert onnx file to tensorRT file.
+
+#### Custom classes number
+
+If you want to change pgie classes number form 10, you neet to change 
+
+- `NUM_CLASSES_YOLO` in `yolo/nvdsinfer_custom_impl_Yolo/nvdsparsebbox_Yolo.cpp`
+- `PGIE_DETECTED_CLASS_NUM` and `pgie_classes_str` in `src/deepstream_rtspsrc_yolo.cpp`

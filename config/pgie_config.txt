@@ -65,7 +65,7 @@ model-color-format=0
 model-engine-file=../yolo/yolov4_1_3_416_416_asari.engine
 ## 0=FP32, 1=INT8, 2=FP16 mode
 network-mode=2
-num-detected-classes=10
+# num-detected-classes=10
 gie-unique-id=1
 network-type=0
 is-classifier=0
