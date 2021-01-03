@@ -10,7 +10,7 @@
 
 # Deepstream rtspsrc YOLO
 
-<img src="https://github.com/ryokubozono/deepstream-rtspsrc-yolo/system_drawing.png" alt="system_drawing" title="system_drawing">
+<img src="https://raw.githubusercontent.com/ryokubozono/deepstream-rtspsrc-yolo/main/system_drawing.png" alt="system_drawing" title="system_drawing">
 
 The program detect objects from RTSP source and create RTSP output.
 
